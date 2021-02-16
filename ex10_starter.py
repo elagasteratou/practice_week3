@@ -5,7 +5,7 @@ if sys.platform == 'win32':
     hdir = os.environ['HOMEPATH']
 else:
     hdir = os.environ['HOME']
-
+    print("home: ",hdir)
 # Construct a portable wildcard pattern
 pattern = os.path.join(hdir, '*')
 print("pattern", pattern)
@@ -28,12 +28,4 @@ list_files = glob.glob(pattern)
 print("original",list_files[0] )
 print("basename for pattern", os.path.basename(list_files[0]))
 
-supplied_pin = input("enter your pin")
-correct_pin = '1234'
-print(type(supplied_pin))
-if supplied_pin == correct_pin:
-    print("correct")
-else:
-    for i in range(0, 2):
-        supplied_pin = input("enter your pin")
-        print("incorrect")
+

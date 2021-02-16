@@ -2,13 +2,16 @@
 from typing import List
 
 Belgium = 'Belgium,10445852,Brussels,737966,Europe,1830,Euro,Catholicism,Dutch,French,German'
-# new_str = ""
-# for i in Belgium:
-#     new_str += "-"
-# print(new_str)
-# print(len(Belgium), len(new_str))
-
-split_Belgium: list[str] = Belgium.split(",")
+new_str = ""
+for i in Belgium:
+    new_str += "-"
+print(new_str)
+print(len(Belgium), len(new_str))
+#
+# split_Belgium: list[str] = Belgium.split(",")
+split_Belgium = Belgium.split(",")
 print(split_Belgium)
 join_Belgium = ": ".join(split_Belgium)
 print(join_Belgium, "\n addition is equal to ", (int(split_Belgium[1]) + int(split_Belgium[3])))
+# try to make it more effienct with less trash
+# try an f string
